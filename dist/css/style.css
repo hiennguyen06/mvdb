@@ -1,0 +1,155 @@
+/* DEFAULTS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: order-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif, helvetica;
+    background-color: #F9FAFB;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #232323;
+    min-height: calc(100vh - 2 * 4vw); 
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main__container {
+  display: flex;
+}
+
+.results__container {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.6rem;
+  /* background-color: black; */
+  padding: 5.4rem;
+}
+
+#favorites__container {
+  background-color: #FFF;
+  height: 100vh;
+  width: 20%;
+  position: sticky;
+  top: 0;
+}
+
+
+
+.results__card {
+    overflow: hidden;
+    /* background: white; */
+    /* box-shadow: 0 0 1.5rem rgba(0,0,0,0.2); */
+    width: 25rem;
+    margin-bottom: 1.6rem;
+  }
+  
+.results__card > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.results__card h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.results__card p {
+  font-size: 1.2rem;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.results__card .results__card--data {
+  padding: 0.5rem;
+  display: flex;
+}
+
+.header {
+  /* position: sticky; */
+  /* top: 0; */
+  height: 8rem;
+  grid-area: head;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rem solid #F9FAFB;
+  /* justify-content: space-between; } */ }
+  .header__logo {
+    margin-left: 4rem;
+    height: 10rem;
+    display: block; }
+
+.search {
+  margin-left: 6.4rem;
+  width: 54rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  border: 0.1rem solid #DAD8D7;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  transition: all .3s; }
+  .search:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08); }
+  .search__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.7rem;
+    width: 54rem; }
+    .search__field:focus {
+      outline: none; }
+    .search__field::placeholder {
+      color: #999; }
+
+.btn {
+  border: none;
+}
+
+.fa-search {
+  font-size: 2rem;
+  padding-right: 1.2rem;
+  color: #999999;
+}
+
+.loader {
+  position: absolute;
+  width: 1140px;
+  top: 45%;
+  left: 38%; }
+  .loader svg {
+    height: 5.5rem;
+    width: 5.5rem;
+    fill: #999;
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
