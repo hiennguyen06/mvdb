@@ -11,6 +11,7 @@ export const clearInput = () => {
 // clear the results 
 export const clearResults = () => {
     elements.searchResList.innerHTML = "";
+    elements.searchResPages.innerHTML = "";
 };
 
 // limit the title length
@@ -46,6 +47,48 @@ const renderMovie = movie => {
     elements.searchResList.insertAdjacentHTML('beforeend', markup);
 }
 
-export const renderResults = movies => {
-    movies.forEach(renderMovie);
+// Implementing pagination buttons
+// Render the button based on the page we are on. If page 1, show go to page 2 button
+// If page 2, show go to page 1 and page 3 etc.
+
+const createButton = (page, type) => `
+    <button class="btn-inline results__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
+        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
+        <div>
+            <i class="fas fa-arrow-${type === 'prev' ? 'left' : 'right'}"></i>
+        </div>
+    </button>
+`;
+
+const renderButtons = (page, totalResults, resPerPage) => {
+    const pages = Math.ceil(totalResults / resPerPage);
+
+    let button 
+    if (page === 1 && pages > 1) {
+        // button to go to next page
+        button = createButton(page, 'next');
+    } else if (page < pages) {
+        // show both buttons 
+        button = `
+            ${createButton(page, 'prev')},
+            ${createButton(page, 'next')}
+        `;
+    } else if (page === pages && pages > 1) {
+        // button to go to prev page
+        button = createButton(page, 'prev');
+    }
+
+    elements.searchResPages.insertAdjacentHTML('afterbegin', button);
+ };
+
+export const renderResults = (movies, page = 1, resPerPage = 3) => {
+    // render results of the current page
+    const start = (page - 1) * resPerPage;
+    const end = page * resPerPage;
+
+    movies.slice(start, end).forEach(renderMovie);
+
+    // ToDO: render pagination
+    renderButtons(page, movies.length, resPerPage);
 };
+

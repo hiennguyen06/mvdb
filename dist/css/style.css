@@ -153,3 +153,37 @@ body {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+
+.results__pages {
+  /* background-color: red; */
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.results__btn--prev {
+  flex-direction: row-reverse; 
+}
+
+.results__btn--next {
+  float: right; 
+}
+
+.btn-inline {
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #252525;
+  padding: .8rem 1.2rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s; }
+  .btn-inline span {
+    margin: 0 .4rem; }
+  .btn-inline:hover {
+    color: #252525;
+    background-color: #fff; }
+  .btn-inline:focus {
+    outline: none; }

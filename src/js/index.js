@@ -38,6 +38,15 @@ elements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
+
+elements.searchResPages.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-inline');
+    if (btn) {
+        const goToPage = parseInt(btn.dataset.goto, 5);
+        searchView.clearResults();
+        searchView.renderResults(state.search.result, goToPage);
+    }
+});
 // const search = new Search('Harry');
 // search.getResults();
 // console.log(search);
