@@ -13,7 +13,7 @@ export default class Search {
         try {
             const res = await axios.get(`${proxy}http://www.omdbapi.com/?s=${this.query}&apikey=${apiKey}&type=movie&page=${page}`);
             this.result = res.data.Search
-            this.page = page
+            this.page = page;
             // console.log(this.result);
         } catch (error) {
             alert(error);
