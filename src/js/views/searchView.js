@@ -30,9 +30,11 @@ export const clearResults = () => {
 //     return title
 // }
 
+// render a single movie element
 const renderMovie = movie => {
     const markup = `
         <div class="results__card">
+        <a class="results__link" href=#${movie.imdbID}>
             <img src="${movie.Poster}"/>
             <div class="results__card--data">
                 <div>
@@ -40,6 +42,7 @@ const renderMovie = movie => {
                 <p class="results__year">${movie.Year}</p>
                 </div>
             </div>                                      
+        </a>
         </div>
     `;
 
