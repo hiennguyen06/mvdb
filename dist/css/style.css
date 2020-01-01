@@ -1,4 +1,106 @@
+:root {
+  --color-primary: ##e6b753;
+  --color-light-1: #fbf7ed;
+  --color-light-2: ##c1c1b5;
+  --color-dark: ##171717; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
 body {
-  background: orange; }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #fbf7ed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+.search {
+  width: 45rem; }
+  .search__field {
+    font-size: 2.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #c1c1b5;
+    width: 100%;
+    padding: 0 0 .8rem; }
+    .search__field:focus {
+      outline: none;
+      width: 100%; }
+    .search__field::-webkit-input-placeholder {
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #c1c1b5; }
+
+.results__card:hover .results__card--data {
+  visibility: visible;
+  opacity: 1; }
+.results__card .results__card--link,
+.results__card .results__card--link {
+  text-decoration: none;
+  color: var(--color-dark); }
+.results__card .results__card--poster {
+  width: 100%;
+  display: block;
+  margin-bottom: .8rem; }
+.results__card .results__card--data {
+  visibility: hidden;
+  width: 100%;
+  padding: 0.7rem 0.7rem; }
+  .results__card .results__card--data .results__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-dark); }
+  .results__card .results__card--data .results__year {
+    font-size: 1.4rem;
+    color: var(--color-light-2); }
+
+.loader {
+  margin: 25vh auto;
+  text-align: center; }
+  .loader svg {
+    height: 5.5rem;
+    width: 5.5rem;
+    fill: #e6b753;
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear; }
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+.container {
+  max-width: 144rem;
+  margin: auto;
+  min-height: 100vh; }
+
+.header {
+  height: 16rem;
+  background: var(--color-light-1);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.results__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+  justify-content: center;
+  align-content: space-between;
+  grid-gap: 6rem 4rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+.search {
+
+    width: 45rem;
+    // background-color: orangered;
+    &__field {
+        font-size: 2.1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #c1c1b5;
+        width: 100%;
+        padding: 0 0 .8rem;
+
+        &:focus {
+            outline: none;
+            width: 100%; // when the input in focus, the width will increase to 100% of its parent element
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #c1c1b5;
+        }
+    }
+    
+
+}
+
+.results__card {
+    // position: relative;
+    
+    &:hover .results__card--data { 
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .results__card--link,
+    .results__card--link {
+        text-decoration: none;
+        color: var(--color-dark);
+
+    }
+
+    .results__card--poster {
+        width: 100%;
+        display: block;
+        margin-bottom: .8rem;
+    }
+
+    .results__card--data {
+        visibility: hidden;
+        // position: absolute;
+        // bottom: 0;
+        // left: 0;
+        width: 100%;
+        padding: 0.7rem 0.7rem;
+
+        .results__title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--color-dark);
+            
+        }
+        .results__year {
+            font-size: 1.4rem;
+            color: var(--color-light-2);
+        }
+
+        
+    }
+}
+
+.loader {
+    margin: 25vh auto;
+    text-align: center; 
+
+    svg {
+      height: 5.5rem;
+      width: 5.5rem;
+      fill: #e6b753;
+      transform-origin: 44% 50%;
+      animation: rotate 1.5s infinite linear; 
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0); 
+        }
+        100% {
+            transform: rotate(360deg); 
+        } 
+    }
+}

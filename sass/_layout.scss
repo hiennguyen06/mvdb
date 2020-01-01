@@ -1,0 +1,21 @@
+.container {
+    max-width: 144rem;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.header {
+    height: 16rem;
+    background: var(--color-light-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+    justify-content: center;
+    align-content: space-between;
+    grid-gap: 6rem 4rem;
+}

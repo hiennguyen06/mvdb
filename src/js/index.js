@@ -81,6 +81,12 @@ elements.searchResPages.addEventListener('click', e => {
     }
 });
 
+// set focus to form input automatically 
+const setFocusToInput = () => {
+    document.querySelector('.search__field').focus();
+};
+setFocusToInput();
+
 // Testing instance of Search
 // const search = new Search('Harry');
 // search.getResults();

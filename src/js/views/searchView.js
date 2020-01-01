@@ -34,15 +34,13 @@ export const clearResults = () => {
 const renderMovie = movie => {
     const markup = `
         <div class="results__card">
-        <a class="results__link" href=#${movie.imdbID}>
-            <img src="${movie.Poster}"/>
-            <div class="results__card--data">
-                <div>
-                <h2 class="results__title">${movie.Title}</h2>
-                <p class="results__year">${movie.Year}</p>
-                </div>
-            </div>                                      
-        </a>
+            <a class="results__card--link" href=#${movie.imdbID}>
+                <img src="${movie.Poster}" class="results__card--poster"/>
+                <div class="results__card--data">
+                    <p class="results__title">${movie.Title}</p>
+                    <p class="results__year">${movie.Year}</p>
+                </div>                                      
+            </a>
         </div>
     `;
 

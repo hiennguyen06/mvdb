@@ -1,3 +1,33 @@
+:root {
+    --color-primary: ##e6b753;
+    --color-light-1: #fbf7ed;
+    --color-light-2: ##c1c1b5;
+    --color-dark: ##171717;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1 rem = 10px, 10px/16px = 62.5%
+}
+
 body {
-    background: orange;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #fbf7ed;
+    background-size: cover;
+    background-repeat: no-repeat; 
+
+    min-height: 100vh; // has to be min 100vh but can stretch if needed
 }
