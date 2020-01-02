@@ -57,7 +57,8 @@ body {
 .results__card .results__card--poster {
   width: 100%;
   display: block;
-  margin-bottom: .8rem; }
+  margin-bottom: .4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 .results__card .results__card--data {
   visibility: hidden;
   width: 100%;
@@ -101,6 +102,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
   justify-content: center;
   align-content: space-between;
-  grid-gap: 6rem 4rem; }
+  grid-gap: 4rem 4rem; }
 
 /*# sourceMappingURL=style.css.map */
