@@ -6,7 +6,7 @@
 
 .header {
     height: 16rem;
-    background: var(--color-light-1);
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,3 +19,37 @@
     align-content: space-between;
     grid-gap: 4rem 4rem;
 }
+
+.movie {
+    width: 100%;
+    max-width: 1440rem;
+    margin: 0 auto; // this only works in the child element
+    // background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem;
+}
+
+.poster {
+    // background-color: palegoldenrod;
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__img {
+        width: 40rem; // always define a width in %
+        display: block; // image should always be a block of inline block;
+        object-fit: cover;
+    }
+}
+
+.info {
+    // background-color: powderblue;
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 0 5.6rem;
+}
+

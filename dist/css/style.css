@@ -2,7 +2,7 @@
   --color-primary: ##e6b753;
   --color-light-1: #fbf7ed;
   --color-light-2: ##c1c1b5;
-  --color-dark: ##171717; }
+  --color-dark: #263239; }
 
 * {
   margin: 0;
@@ -21,7 +21,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-color: #fbf7ed;
+  background-color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
@@ -58,11 +58,12 @@ body {
   width: 100%;
   display: block;
   margin-bottom: .4rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
 .results__card .results__card--data {
   visibility: hidden;
   width: 100%;
-  padding: 0.7rem 0.7rem; }
+  padding: 0.7rem 0.7rem;
+  text-align: center; }
   .results__card .results__card--data .results__title {
     font-size: 1.4rem;
     font-weight: 500;
@@ -77,7 +78,7 @@ body {
   .loader svg {
     height: 5.5rem;
     width: 5.5rem;
-    fill: #e6b753;
+    fill: #c1c1b5;
     transform-origin: 44% 50%;
     animation: rotate 1.5s infinite linear; }
 @keyframes rotate {
@@ -85,6 +86,21 @@ body {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+.movie-info {
+  margin-bottom: 1.6rem; }
+  .movie-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 0.8rem; }
+  .movie-info p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--color-light-2); }
+  .movie-info__title {
+    font-size: 4rem; }
+
 .container {
   max-width: 144rem;
   margin: auto;
@@ -92,7 +108,7 @@ body {
 
 .header {
   height: 16rem;
-  background: var(--color-light-1);
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -103,5 +119,30 @@ body {
   justify-content: center;
   align-content: space-between;
   grid-gap: 4rem 4rem; }
+
+.movie {
+  width: 100%;
+  max-width: 1440rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem; }
+
+.poster {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end; }
+  .poster__img {
+    width: 40rem;
+    display: block;
+    object-fit: cover; }
+
+.info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 0 5.6rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -48,7 +48,8 @@
         width: 100%;
         display: block;
         margin-bottom: .4rem;
-        box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+        box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
+        // border-radius: 0.6rem;
     }
 
     .results__card--data {
@@ -58,6 +59,7 @@
         // left: 0;
         width: 100%;
         padding: 0.7rem 0.7rem;
+        text-align: center;
 
         .results__title {
             font-size: 1.4rem;
@@ -81,7 +83,7 @@
     svg {
       height: 5.5rem;
       width: 5.5rem;
-      fill: #e6b753;
+      fill: #c1c1b5;
       transform-origin: 44% 50%;
       animation: rotate 1.5s infinite linear; 
     }
@@ -94,4 +96,28 @@
             transform: rotate(360deg); 
         } 
     }
+}
+
+.movie-info {
+    margin-bottom: 1.6rem;
+
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 0.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        font-weight: 400;
+        color: var(--color-light-2);
+        
+    }
+
+    &__title {
+        font-size: 4rem;
+    }
+
 }
