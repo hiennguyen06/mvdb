@@ -92,14 +92,17 @@ body {
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding-bottom: 0.8rem; }
+    padding-bottom: 0.8rem;
+    color: #c1c1b5;
+    letter-spacing: 1px; }
   .movie-info p {
     font-size: 1.4rem;
     line-height: 1.8;
     font-weight: 400;
-    color: var(--color-light-2); }
+    color: #263239; }
   .movie-info__title {
-    font-size: 4rem; }
+    font-size: 3.2rem;
+    color: #263239; }
 
 .container {
   max-width: 144rem;

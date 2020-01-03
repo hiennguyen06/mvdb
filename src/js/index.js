@@ -1,6 +1,7 @@
 import Search from './models/Search';
 import Movie from './models/Movie';
 import * as searchView from './views/searchView';
+import * as movieView from './views/movieView';
 import { elements, renderLoader, clearLoader } from './views/base';
 // State: data in a given moment, in place in one object. Redux is a state management library
 // Global state of the app
@@ -26,6 +27,7 @@ const controlSearch = async () => {
         searchView.clearInput();
         searchView.clearResults();
         renderLoader(elements.searchLoad);
+        movieView.clearMovie();
 
         // 4. Search for recipes
         await state.search.getResults(); // returns a promise (every async function returns a promise) so we need to await
@@ -41,11 +43,15 @@ const controlMovie = async () => {
     
     // Get the ID from the hash URL
     const id = window.location.hash.replace('#', '');
-    console.log(id);
+    // console.log(id);
 
     // if there is an id
     if (id) 
     // Prepare UI for changes
+    movieView.clearMovie();
+    searchView.clearResults();
+    renderLoader(elements.searchLoad);
+
     // Create a new Movie object
     state.movie = new Movie(id); // creates a new movie object and adds it to the state
 
@@ -54,7 +60,9 @@ const controlMovie = async () => {
         await state.movie.getMovie();
     
         // Render Movie to UI
-        console.log(state.movie); // console log the state.movie for now. Clicking on each movie will render a new id in the console.
+        clearLoader();
+        movieView.renderMovie(state.movie);
+        // console.log(state.movie); // console log the state.movie for now. Clicking on each movie will render a new id in the console.
 
     } catch (error) {
         alert('Errror processing movie');
@@ -62,7 +70,7 @@ const controlMovie = async () => {
 
 }
 
-['hashchange', 'load'].forEach(event => window.addEventListener(event, controlMovie));
+['hashchange'].forEach(event => window.addEventListener(event, controlMovie));
 // EVENT LISTENERS
 
 // Event Listener - Search
@@ -80,6 +88,8 @@ elements.searchResPages.addEventListener('click', e => {
         searchView.renderResults(state.search.result, goToPage);
     }
 });
+
+// Event listener for container
 
 // set focus to form input automatically 
 const setFocusToInput = () => {
