@@ -1,5 +1,6 @@
 import Search from './models/Search';
 import Movie from './models/Movie';
+import Favourites from './models/Favourites';
 import * as searchView from './views/searchView';
 import * as movieView from './views/movieView';
 import { elements, renderLoader, clearLoader } from './views/base';
@@ -70,6 +71,40 @@ const controlMovie = async () => {
 
 }
 
+// Favourite controller 
+const controlFavourite = () => {
+    // if we don't already have an exisiting favourited movie
+    if (!state.favourites) state.favourites = new Favourites();
+    // save id of current movie
+    const currentID = state.movie.id;
+    console.log(currentID);
+
+    // User has not liked the current movie
+    if (!state.favourites.isFavourited(currentID)) {
+        // add the favourite to the state
+        const newFavourite = state.favourites.addFavourites(
+            currentID,
+            state.movie.title,
+            state.movie.img
+        )
+
+        // Toggle the favourites button
+
+        // Render the UI list
+        console.log(state.favourites);
+
+    }  else {
+        // Remove like to the state
+        state.favourites.deleteFavourite(currentID);
+        // Toggle the like button
+
+        // Remove Like to UI list
+        console.log(state.favourites)
+    }
+
+}
+
+
 ['hashchange'].forEach(event => window.addEventListener(event, controlMovie));
 // EVENT LISTENERS
 
@@ -90,6 +125,10 @@ elements.searchResPages.addEventListener('click', e => {
 });
 
 // Event listener for container
+elements.movie.addEventListener('click', e => {
+    e.target.matches('.movie__favourite, .movie__favourite *');
+    controlFavourite();
+});
 
 // set focus to form input automatically 
 const setFocusToInput = () => {

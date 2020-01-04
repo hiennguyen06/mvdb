@@ -42,6 +42,9 @@ export const renderMovie = movie => {
             </div>
 
         </div>
+        <button class="movie__favourite"> 
+                Add to Favourites
+        </button>
     </div>
     `;
 
