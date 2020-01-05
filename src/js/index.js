@@ -3,6 +3,7 @@ import Movie from './models/Movie';
 import Favourites from './models/Favourites';
 import * as searchView from './views/searchView';
 import * as movieView from './views/movieView';
+import * as favouritesView from './views/favouritesView';
 import { elements, renderLoader, clearLoader } from './views/base';
 // State: data in a given moment, in place in one object. Redux is a state management library
 // Global state of the app
@@ -62,7 +63,10 @@ const controlMovie = async () => {
     
         // Render Movie to UI
         clearLoader();
-        movieView.renderMovie(state.movie);
+        movieView.renderMovie(
+            state.movie,
+            state.favourites.isFavourited(id)
+        );
         // console.log(state.movie); // console log the state.movie for now. Clicking on each movie will render a new id in the console.
 
     } catch (error) {
@@ -71,13 +75,17 @@ const controlMovie = async () => {
 
 }
 
+// TESTING
+state.favourites = new Favourites();
+favouritesView.toggleFavouriteMenu(state.favourites.getNumFav());
+
 // Favourite controller 
 const controlFavourite = () => {
     // if we don't already have an exisiting favourited movie
     if (!state.favourites) state.favourites = new Favourites();
     // save id of current movie
     const currentID = state.movie.id;
-    console.log(currentID);
+    // console.log(currentID);
 
     // User has not liked the current movie
     if (!state.favourites.isFavourited(currentID)) {
@@ -85,23 +93,31 @@ const controlFavourite = () => {
         const newFavourite = state.favourites.addFavourites(
             currentID,
             state.movie.title,
+            state.movie.release,
             state.movie.img
         )
 
         // Toggle the favourites button
+        favouritesView.toggleFavouriteBtn(true);
 
         // Render the UI list
+        favouritesView.renderFavourite(newFavourite);
         console.log(state.favourites);
 
     }  else {
         // Remove like to the state
         state.favourites.deleteFavourite(currentID);
+
         // Toggle the like button
+        favouritesView.toggleFavouriteBtn(false);
 
         // Remove Like to UI list
+        favouritesView.removeFavourite(currentID);
         console.log(state.favourites)
     }
 
+    // Toggle the like menu when there is more than 1 like
+    favouritesView.toggleFavouriteMenu(state.favourites.getNumFav());
 }
 
 

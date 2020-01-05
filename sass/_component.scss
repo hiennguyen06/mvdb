@@ -138,6 +138,8 @@
 
 .favourites-container__likes {
     width: 30rem;
+    text-decoration: none;
+    color: inherit;
     overflow: hidden;
     height: 10rem;
     background: #fff;
@@ -145,6 +147,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.6rem;
+
 
     img {
         height: 100%;

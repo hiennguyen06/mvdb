@@ -3,8 +3,8 @@ export default class Favourites {
         this.favourites = [];
     }
 
-    addFavourites(id, title, img) {
-        const favourite = { id, title, img };
+    addFavourites(id, title, release, img) {
+        const favourite = { id, title, release, img };
         this.favourites.push(favourite);
         return favourite;
     }
@@ -21,7 +21,7 @@ export default class Favourites {
     } 
 
     getNumFav() {
-        this.favourites.length;
+        return this.favourites.length;
     }
 
 }

@@ -5,7 +5,7 @@ export const clearMovie = () => {
     elements.movie.innerHTML = '';
 };
 
-export const renderMovie = movie => {
+export const renderMovie = (movie, isFavourited) => {
     const markup = `
     <div class="poster">
         <img src="${movie.img}" alt="Movie Poster" class="poster__img">
@@ -44,7 +44,7 @@ export const renderMovie = movie => {
         </div>
         <button class="movie__favourite"> 
             <svg class="movie__favourite--love">
-                <use href="images/icons.svg#icon-heart"></use>
+                <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}"></use>
             </svg>
         </button>
     </div>

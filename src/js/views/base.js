@@ -4,7 +4,8 @@ export const elements = {
     searchResList: document.querySelector('.results__container'),
     searchLoad: document.querySelector('.results__container'),
     searchResPages: document.querySelector('.results__pages'),
-    movie: document.querySelector('.movie')
+    movie: document.querySelector('.movie'),
+    favouritesMenu: document.querySelector('.favourites-container')
 };
 
 export const elementStrings = {
