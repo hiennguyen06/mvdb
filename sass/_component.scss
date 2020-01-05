@@ -124,3 +124,49 @@
     }
 
 }
+
+.movie__favourite {
+    border: none;
+    height: 2.25rem;
+    width: 2.25rem;
+
+    &--love {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.favourites-container__likes {
+    width: 30rem;
+    overflow: hidden;
+    height: 10rem;
+    background: #fff;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    img {
+        height: 100%;
+        width: 8rem;   
+        object-fit: cover;
+    }
+
+    .favourites-container__infos {
+        padding: .8rem;
+
+        .favorites-container__infos-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .favorites-container__infos-text {
+            font-size: 1.2rem;
+            opacity: .7;
+            margin-bottom: 0;
+            // margin-top: 8px;
+        }
+
+    }
+}

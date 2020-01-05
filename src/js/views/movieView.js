@@ -43,7 +43,9 @@ export const renderMovie = movie => {
 
         </div>
         <button class="movie__favourite"> 
-                Add to Favourites
+            <svg class="movie__favourite--love">
+                <use href="images/icons.svg#icon-heart"></use>
+            </svg>
         </button>
     </div>
     `;

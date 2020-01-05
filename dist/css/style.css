@@ -104,6 +104,38 @@ body {
     font-size: 3.2rem;
     color: #263239; }
 
+.movie__favourite {
+  border: none;
+  height: 2.25rem;
+  width: 2.25rem; }
+  .movie__favourite--love {
+    height: 100%;
+    width: 100%; }
+
+.favourites-container__likes {
+  width: 30rem;
+  overflow: hidden;
+  height: 10rem;
+  background: #fff;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem; }
+  .favourites-container__likes img {
+    height: 100%;
+    width: 8rem;
+    object-fit: cover; }
+  .favourites-container__likes .favourites-container__infos {
+    padding: .8rem; }
+    .favourites-container__likes .favourites-container__infos .favorites-container__infos-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 0; }
+    .favourites-container__likes .favourites-container__infos .favorites-container__infos-text {
+      font-size: 1.2rem;
+      opacity: .7;
+      margin-bottom: 0; }
+
 .container {
   max-width: 144rem;
   margin: auto;
@@ -147,5 +179,12 @@ body {
   flex-direction: column;
   align-self: stretch;
   padding: 0 5.6rem; }
+
+.favourites-container {
+  background-color: #c1c1b5;
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
