@@ -14,6 +14,11 @@ export const clearResults = () => {
     elements.searchResPages.innerHTML = "";
 };
 
+// clear container 
+// export const clearResultsContainer = () => {
+//     elements.searchResList.style.display = "none";
+// };
+
 // limit the title length
 // const limitMovieTitle = (title, limit = 17) => {
 //     const newTitle = [];
@@ -54,9 +59,9 @@ const renderMovie = movie => {
 
 const createButton = (page, type) => `
     <button class="btn-inline results__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
-        <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
-        <div>
-            <i class="fas fa-arrow-${type === 'prev' ? 'left' : 'right'}"></i>
+        <span class="btn__page-number">Page ${type === 'prev' ? page - 1 : page + 1}</span>
+        <div class="btn-icon">
+            <i class="fas fa-chevron-${type === 'prev' ? 'left' : 'right'}"></i>
         </div>
     </button>
 `;
@@ -71,7 +76,7 @@ const renderButtons = (page, totalResults, resPerPage) => {
     } else if (page < pages) {
         // show both buttons 
         button = `
-            ${createButton(page, 'prev')},
+            ${createButton(page, 'prev')}
             ${createButton(page, 'next')}
         `;
     } else if (page === pages && pages > 1) {

@@ -73,14 +73,21 @@ body {
     color: var(--color-light-2); }
 
 .loader {
-  margin: 25vh auto;
-  text-align: center; }
+  margin: 24vh auto;
+  text-align: center;
+  display: flex;
+  align-items: center; }
   .loader svg {
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 2.4rem;
+    width: 2.4rem;
     fill: #c1c1b5;
     transform-origin: 44% 50%;
     animation: rotate 1.5s infinite linear; }
+  .loader .loading {
+    color: #c1c1b5;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: .4rem; }
 @keyframes rotate {
   0% {
     transform: rotate(0); }
@@ -125,8 +132,9 @@ body {
   margin-bottom: 1.6rem; }
   .favourites-container__likes img {
     height: 100%;
-    width: 8rem;
-    object-fit: cover; }
+    width: 6rem;
+    object-fit: cover;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
   .favourites-container__likes .favourites-container__infos {
     padding: .8rem; }
     .favourites-container__likes .favourites-container__infos .favorites-container__infos-title {
@@ -138,8 +146,34 @@ body {
       opacity: .7;
       margin-bottom: 0; }
 
+.btn-inline,
+.btn-watchlist {
+  height: 3.2rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  padding: 0 1.6rem;
+  border: 1px solid #c1c1b5;
+  color: #c1c1b5;
+  margin: 0 2px 0 2px;
+  font-weight: 500;
+  border-radius: 0 2px 2px 0;
+  transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s; }
+  .btn-inline:hover,
+  .btn-watchlist:hover {
+    background-color: #c1c1b5;
+    color: #fff; }
+  .btn-inline:focus,
+  .btn-watchlist:focus {
+    outline: none;
+    animation: pulstate 1s infinite; }
+  .btn-inline .btn__page-number,
+  .btn-watchlist .btn__page-number {
+    display: none; }
+
 .container {
-  max-width: 144rem;
+  max-width: 160rem;
   margin: auto;
   min-height: 100vh; }
 
@@ -148,14 +182,16 @@ body {
   background: #fff;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: orangered; }
 
 .results__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
   justify-content: center;
   align-content: space-between;
-  grid-gap: 4rem 4rem; }
+  grid-gap: 4rem 4rem;
+  margin-bottom: 5.6rem; }
 
 .movie {
   width: 100%;
@@ -164,7 +200,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 4rem; }
+  padding: 2rem 4rem; }
 
 .poster {
   flex: 1 1 40%;
@@ -183,8 +219,11 @@ body {
   padding: 0 5.6rem; }
 
 .favourites-container {
-  background-color: #c1c1b5;
+  background-color: transparent;
   width: 32rem;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center; }

@@ -1,6 +1,6 @@
 import { elements } from './base';
 
-// clear the old recipeView 
+// clear the old movieView 
 export const clearMovie = () => {
     elements.movie.innerHTML = '';
 };

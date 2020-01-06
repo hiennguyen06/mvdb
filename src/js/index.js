@@ -52,6 +52,7 @@ const controlMovie = async () => {
     // Prepare UI for changes
     movieView.clearMovie();
     searchView.clearResults();
+    // searchView.clearResultsContainer();
     renderLoader(elements.searchLoad);
 
     // Create a new Movie object

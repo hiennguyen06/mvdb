@@ -1,5 +1,4 @@
 .search {
-
     width: 45rem;
     // background-color: orangered;
     &__field {
@@ -77,15 +76,24 @@
 }
 
 .loader {
-    margin: 25vh auto;
-    text-align: center; 
+    margin: 24vh auto;
+    text-align: center;
+    display: flex;
+    align-items: center; 
 
     svg {
-      height: 5.5rem;
-      width: 5.5rem;
+      height: 2.4rem;
+      width: 2.4rem;
       fill: #c1c1b5;
       transform-origin: 44% 50%;
       animation: rotate 1.5s infinite linear; 
+    }
+
+    .loading {
+        color: #c1c1b5;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-left: .4rem;
     }
 
     @keyframes rotate {
@@ -151,8 +159,9 @@
 
     img {
         height: 100%;
-        width: 8rem;   
+        width: 6rem;   
         object-fit: cover;
+        box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
     }
 
     .favourites-container__infos {
@@ -173,3 +182,36 @@
 
     }
 }
+
+.btn-inline,
+.btn-watchlist {
+    height: 3.2rem;
+    // line-height: 3.4rem;
+    // background-color: #c1c1b5;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    padding: 0 1.6rem;
+    border: 1px solid #c1c1b5;
+    color: #c1c1b5;
+    margin: 0 2px 0 2px;
+    font-weight: 500;
+    border-radius: 0 2px 2px 0;
+    transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+
+    &:hover {
+        background-color: #c1c1b5;
+        color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulstate 1s infinite; // animation name determined from the keyframe animation below
+    }
+
+    .btn__page-number {
+        display: none;
+    }
+}
+
