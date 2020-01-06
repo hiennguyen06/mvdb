@@ -116,11 +116,12 @@ body {
 
 .add {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   height: 4.8rem;
   width: 24rem;
-  border: 2px solid #c1c1b5; }
+  border: 1px solid #c1c1b5; }
   .add .movie__favourite--love {
     height: 2.25rem;
     width: 2.25rem;
@@ -163,15 +164,15 @@ body {
 .btn-inline,
 .btn-watchlist {
   height: 3.2rem;
+  cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.4rem;
-  padding: 0 1.6rem;
+  padding: 0 2rem;
   border: 1px solid #c1c1b5;
   color: #c1c1b5;
-  margin: 0 2px 0 2px;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 0 2px 2px 0;
   transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s; }
   .btn-inline:hover,
@@ -199,6 +200,12 @@ body {
   .watchlist .favorites-container,
   .watchlist .favourites-container__likes {
     visibility: hidden; }
+
+.back {
+  margin-top: 2rem; }
+  .back .btn-back {
+    letter-spacing: 1px;
+    font-size: 1.5rem; }
 
 .container {
   max-width: 144rem;

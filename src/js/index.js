@@ -4,7 +4,7 @@ import Favourites from './models/Favourites';
 import * as searchView from './views/searchView';
 import * as movieView from './views/movieView';
 import * as favouritesView from './views/favouritesView';
-import { elements, renderLoader, clearLoader } from './views/base';
+import { elements, renderLoader, clearLoader, setFocusToInput, renderHome } from './views/base';
 // State: data in a given moment, in place in one object. Redux is a state management library
 // Global state of the app
 // Search Object
@@ -31,7 +31,7 @@ const controlSearch = async () => {
         renderLoader(elements.searchLoad);
         movieView.clearMovie();
 
-        // 4. Search for recipes
+        // 4. Search for movies
         await state.search.getResults(); // returns a promise (every async function returns a promise) so we need to await
 
         // 5. Render results on UI
@@ -143,15 +143,25 @@ elements.searchResPages.addEventListener('click', e => {
 
 // Event listener for container
 elements.movie.addEventListener('click', e => {
-    e.target.matches('.movie__favourite, .movie__favourite *');
-    controlFavourite();
+    
+   if (e.target.matches('.add, .add *')) {
+       controlFavourite();
+       
+   } else if (e.target.matches('.back, .back *')) {
+    movieView.clearMovie();
+    setFocusToInput();
+    searchView.renderResults(state.search.result);
+   }
 });
 
+// On page reload
+// window.addEventListener('load', () => {
+//     renderHome();
+// });
+
 // set focus to form input automatically 
-const setFocusToInput = () => {
-    document.querySelector('.search__field').focus();
-};
 setFocusToInput();
+
 
 // Testing instance of Search
 // const search = new Search('Harry');

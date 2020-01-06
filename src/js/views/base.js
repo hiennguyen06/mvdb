@@ -28,3 +28,21 @@ export const clearLoader = () => {
     const loader = document.querySelector(`.${elementStrings.loader}`);
     if (loader) loader.parentElement.removeChild(loader);
 };
+
+export const setFocusToInput = () => {
+    document.querySelector('.search__field').focus();
+};
+
+
+// export const renderHome = () => {
+//     const markup = `
+//     <div class="results__card">
+//                 <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg" class="results__cards--poster"/>
+//                 <div class="results__card--data">
+//                     <h2>The Dark Knight</h2>
+//                     <p>Action, Crime, Drama, Thriller</p>
+//                 </div>
+//             </div> 
+//     `;
+//     elements.searchResList.insertAdjacentHTML('beforeend', markup);
+// };

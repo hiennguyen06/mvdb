@@ -45,12 +45,14 @@ export const renderMovie = (movie, isFavourited) => {
         <div class="add"
             <button class="movie__favourite"> 
                 <svg class="movie__favourite--love">
-                    <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}">
-                    </use>
-                    </svg>
-                    </button>
-                <p class="add-to-watchlist">Add to watchlist</p>
-        </div>
+                    <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}"></use>
+                </svg>
+            </button>
+            <p class="add-to-watchlist">Add to watchlist</p>
+            </div>
+            <div class="back">
+                <button class="btn-inline btn-back">Back</button>
+            </div>
     </div>
     `;
 
