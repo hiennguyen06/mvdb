@@ -49,7 +49,8 @@ body {
 
 .results__card:hover .results__card--data {
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+  transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s; }
 .results__card .results__card--link,
 .results__card .results__card--link {
   text-decoration: none;
@@ -57,8 +58,7 @@ body {
 .results__card .results__card--poster {
   width: 100%;
   display: block;
-  margin-bottom: .4rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  margin-bottom: .4rem; }
 .results__card .results__card--data {
   visibility: hidden;
   width: 100%;
@@ -76,10 +76,11 @@ body {
   margin: 24vh auto;
   text-align: center;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .loader svg {
-    height: 2.4rem;
-    width: 2.4rem;
+    height: 2.2rem;
+    width: 2.2rem;
     fill: #c1c1b5;
     transform-origin: 44% 50%;
     animation: rotate 1.5s infinite linear; }
@@ -87,37 +88,50 @@ body {
     color: #c1c1b5;
     font-size: 1.6rem;
     font-weight: 400;
-    margin-left: .4rem; }
+    margin-left: .6rem; }
 @keyframes rotate {
   0% {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
 .movie-info {
-  margin-bottom: 1.6rem; }
+  margin-bottom: 2rem;
+  width: 42rem; }
   .movie-info h2 {
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
     color: #c1c1b5;
     letter-spacing: 1px; }
   .movie-info p {
     font-size: 1.4rem;
-    line-height: 1.8;
+    line-height: 1.6;
     font-weight: 400;
     color: #263239; }
   .movie-info__title {
     font-size: 3.2rem;
+    margin-bottom: 3.2rem;
     color: #263239; }
 
-.movie__favourite {
-  border: none;
-  height: 2.25rem;
-  width: 2.25rem; }
-  .movie__favourite--love {
-    height: 100%;
-    width: 100%; }
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8rem;
+  width: 24rem;
+  border: 2px solid #c1c1b5; }
+  .add .movie__favourite--love {
+    height: 2.25rem;
+    width: 2.25rem;
+    outline: orange;
+    fill: #c1c1b5; }
+  .add .add-to-watchlist {
+    font-size: 1.5rem;
+    color: #c1c1b5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: .6rem; }
 
 .favourites-container__likes {
   width: 30rem;
@@ -172,29 +186,44 @@ body {
   .btn-watchlist .btn__page-number {
     display: none; }
 
+.watchlist {
+  position: relative; }
+  .watchlist .btn-watchlist {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-radius: 0 2px 2px 0; }
+  .watchlist:hover .favourites-container__likes {
+    visibility: visible;
+    opacity: 1;
+    transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s; }
+  .watchlist .favorites-container,
+  .watchlist .favourites-container__likes {
+    visibility: hidden; }
+
 .container {
-  max-width: 160rem;
+  max-width: 144rem;
   margin: auto;
   min-height: 100vh; }
 
 .header {
-  height: 16rem;
+  height: 12rem;
   background: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: orangered; }
+  position: sticky;
+  top: 0;
+  z-index: 1; }
 
 .results__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
   justify-content: center;
   align-content: space-between;
-  grid-gap: 4rem 4rem;
-  margin-bottom: 5.6rem; }
+  grid-gap: 4rem 4rem; }
 
 .movie {
-  width: 100%;
+  width: 90%;
   max-width: 1440rem;
   margin: 0 auto;
   display: flex;
@@ -207,12 +236,12 @@ body {
   display: flex;
   justify-content: flex-end; }
   .poster__img {
-    width: 40rem;
+    width: 42rem;
     display: block;
     object-fit: cover; }
 
 .info {
-  flex: 1 1 60%;
+  flex: 1 1 56%;
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -222,14 +251,16 @@ body {
   background-color: transparent;
   width: 32rem;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 6rem;
+  left: -8px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding: .8rem; }
 
 .results__pages {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  height: 8rem; }
 
 /*# sourceMappingURL=style.css.map */

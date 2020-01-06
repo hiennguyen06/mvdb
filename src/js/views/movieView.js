@@ -42,11 +42,15 @@ export const renderMovie = (movie, isFavourited) => {
             </div>
 
         </div>
-        <button class="movie__favourite"> 
-            <svg class="movie__favourite--love">
-                <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}"></use>
-            </svg>
-        </button>
+        <div class="add"
+            <button class="movie__favourite"> 
+                <svg class="movie__favourite--love">
+                    <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}">
+                    </use>
+                    </svg>
+                    </button>
+                <p class="add-to-watchlist">Add to watchlist</p>
+        </div>
     </div>
     `;
 

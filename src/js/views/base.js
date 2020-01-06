@@ -16,7 +16,7 @@ export const renderLoader = parent => {
     const loader = `
         <div class= "loader">
             <svg>
-                <use href="images/icons.svg#icon-cw"></use>
+                <use href="images/icons.svg#icon-spinner2"></use>
             </svg>
             <span class="loading">loading</span>
         </div>

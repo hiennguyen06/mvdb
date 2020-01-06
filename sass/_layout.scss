@@ -1,17 +1,20 @@
 .container {
-    max-width: 160rem;
+    max-width: 144rem;
     margin: auto;
     min-height: 100vh;
     // background-color: orange;
 }
 
 .header {
-    height: 16rem;
+    height: 12rem;
     background: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: orangered;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    // background-color: orangered;
 }
 
 .results__container {
@@ -20,11 +23,11 @@
     justify-content: center;
     align-content: space-between;
     grid-gap: 4rem 4rem;
-    margin-bottom: 5.6rem;
+    // margin-bottom: 3.2rem;
 }
 
 .movie {
-    width: 100%;
+    width: 90%;
     max-width: 1440rem;
     margin: 0 auto; // this only works in the child element
     // background-color: orangered;
@@ -41,7 +44,7 @@
     justify-content: flex-end;
 
     &__img {
-        width: 40rem; // always define a width in %
+        width: 42rem; // always define a width in %
         display: block; // image should always be a block of inline block;
         object-fit: cover;
     }
@@ -49,7 +52,7 @@
 
 .info {
     // background-color: powderblue;
-    flex: 1 1 60%;
+    flex: 1 1 56%;
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -60,15 +63,18 @@
     background-color: transparent;
     width: 32rem;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6rem;
+    left: -8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: .8rem;
 }
 
 .results__pages {
     // background-color: yellow;
     display: flex;
     justify-content: center;
+    // align-items: center;
+    height: 8rem;
 }

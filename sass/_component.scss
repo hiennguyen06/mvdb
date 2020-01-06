@@ -34,6 +34,7 @@
     &:hover .results__card--data { 
         visibility: visible;
         opacity: 1;
+        transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
     }
 
     .results__card--link,
@@ -47,7 +48,7 @@
         width: 100%;
         display: block;
         margin-bottom: .4rem;
-        box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
+        // box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
         // border-radius: 0.6rem;
     }
 
@@ -80,10 +81,11 @@
     text-align: center;
     display: flex;
     align-items: center; 
+    justify-content: center;
 
     svg {
-      height: 2.4rem;
-      width: 2.4rem;
+      height: 2.2rem;
+      width: 2.2rem;
       fill: #c1c1b5;
       transform-origin: 44% 50%;
       animation: rotate 1.5s infinite linear; 
@@ -93,7 +95,7 @@
         color: #c1c1b5;
         font-size: 1.6rem;
         font-weight: 400;
-        margin-left: .4rem;
+        margin-left: .6rem;
     }
 
     @keyframes rotate {
@@ -107,20 +109,22 @@
 }
 
 .movie-info {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
+    width: 42rem;
 
     h2 {
+        
         font-size: 1.4rem;
         font-weight: 600;
         text-transform: uppercase;
-        padding-bottom: 0.8rem;
+        padding-bottom: 0.4rem;
         color: #c1c1b5;
         letter-spacing: 1px;
     }
 
     p {
         font-size: 1.4rem;
-        line-height: 1.8;
+        line-height: 1.6;
         font-weight: 400;
         color: #263239;
         
@@ -128,21 +132,44 @@
 
     &__title {
         font-size: 3.2rem;
+        margin-bottom: 3.2rem;
         color: #263239;
     }
 
 }
 
-.movie__favourite {
-    border: none;
-    height: 2.25rem;
-    width: 2.25rem;
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.8rem;
+    width: 24rem;
+    border: 2px solid #c1c1b5;
+    // background-color: orangered;
 
-    &--love {
-        height: 100%;
-        width: 100%;
+    .movie__favourite {
+        // border: none;
+        // border: 1px solid #c1c1b5;
+    
+    
+        &--love {
+            height: 2.25rem;
+            width: 2.25rem;
+            outline: orange;
+            fill: #c1c1b5;
+        }       
     }
+
+    .add-to-watchlist {
+        font-size: 1.5rem;
+        color:  #c1c1b5;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-left: .6rem;
+    }
+
 }
+
 
 .favourites-container__likes {
     width: 30rem;
@@ -215,3 +242,26 @@
     }
 }
 
+// watchllist hover
+.watchlist {
+
+    position: relative;
+    // padding: 2rem 0;
+
+    .btn-watchlist {
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        border-radius: 0 2px 2px 0;
+    }
+
+    &:hover .favourites-container__likes {
+        visibility: visible;
+        opacity: 1;
+        transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+    }
+
+    .favorites-container,
+    .favourites-container__likes {
+        visibility: hidden;
+    }
+}
