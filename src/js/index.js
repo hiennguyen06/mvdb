@@ -77,8 +77,6 @@ const controlMovie = async () => {
 }
 
 // TESTING
-state.favourites = new Favourites();
-favouritesView.toggleFavouriteMenu(state.favourites.getNumFav());
 
 // Favourite controller 
 const controlFavourite = () => {
@@ -114,12 +112,26 @@ const controlFavourite = () => {
 
         // Remove Like to UI list
         favouritesView.removeFavourite(currentID);
-        console.log(state.favourites)
+        // console.log(state.favourites)
     }
 
     // Toggle the like menu when there is more than 1 like
     favouritesView.toggleFavouriteMenu(state.favourites.getNumFav());
 }
+
+// Restore likes recipe on page load
+window.addEventListener('load', () => {
+    state.favourites = new Favourites();
+    
+    // restore the likes
+    state.favourites.readStorage();
+
+    // toggle the like button
+    favouritesView.toggleFavouriteMenu(state.favourites.getNumFav());
+
+    // render the existing likes
+    state.favourites.favourites.forEach(favourite => favouritesView.renderFavourite(favourite));
+});
 
 
 ['hashchange'].forEach(event => window.addEventListener(event, controlMovie));
