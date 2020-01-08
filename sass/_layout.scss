@@ -17,6 +17,17 @@
     // background-color: orangered;
 }
 
+.home {
+    max-width: 100%;
+    height: 75vh;
+
+    img {
+        width: 100%;
+        height: 75vh;
+        object-fit: contain;
+    }
+}
+
 .results__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));

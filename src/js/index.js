@@ -26,6 +26,7 @@ const controlSearch = async () => {
         state.search = new Search(query);
 
         // 3. Prepare UI for results
+        clearHome();
         searchView.clearInput();
         searchView.clearResults();
         renderLoader(elements.searchLoad);
@@ -166,9 +167,19 @@ elements.movie.addEventListener('click', e => {
    }
 });
 
+// Clear the entire conatiner
+
+// const clearContent = () => {
+//     document.querySelector('.results__container').style.display = "none";
+// };
+
+const clearHome = () => {
+    document.querySelector('.home').style.display = "none";
+}
+
 // On page reload
 // window.addEventListener('load', () => {
-//     renderHome();
+//     // renderHome();
 // });
 
 // set focus to form input automatically 
