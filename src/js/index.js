@@ -51,6 +51,7 @@ const controlMovie = async () => {
     // if there is an id
     if (id) 
     // Prepare UI for changes
+    clearHome();
     movieView.clearMovie();
     searchView.clearResults();
     // searchView.clearResultsContainer();
@@ -138,7 +139,7 @@ window.addEventListener('load', () => {
 ['hashchange'].forEach(event => window.addEventListener(event, controlMovie));
 // EVENT LISTENERS
 
-// Event Listener - Search
+// Event Listener - Search and prevent default form behaviour
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
@@ -165,7 +166,9 @@ elements.movie.addEventListener('click', e => {
     setFocusToInput();
     searchView.renderResults(state.search.result);
    }
-});
+})
+
+
 
 // Clear the entire conatiner
 
@@ -176,6 +179,7 @@ elements.movie.addEventListener('click', e => {
 const clearHome = () => {
     document.querySelector('.home').style.display = "none";
 }
+
 
 // On page reload
 // window.addEventListener('load', () => {
