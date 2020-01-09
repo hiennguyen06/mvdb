@@ -1,8 +1,8 @@
 :root {
   --color-primary: ##e6b753;
   --color-light-1: #fbf7ed;
-  --color-light-2: ##c1c1b5;
-  --color-dark: #263239; }
+  --color-light-2: #8d8b85;
+  --color-dark: #4b4f52; }
 
 * {
   margin: 0;
@@ -68,12 +68,13 @@ body {
   padding: 0.7rem 0.7rem;
   text-align: center; }
   .results__card .results__card--data .results__title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    color: var(--color-dark); }
+    color: #4b4f52; }
   .results__card .results__card--data .results__year {
-    font-size: 1.4rem;
-    color: var(--color-light-2); }
+    font-size: 1.6rem;
+    color: #4b4f52;
+    opacity: .7; }
 
 .loader {
   margin: 24vh auto;
@@ -89,7 +90,7 @@ body {
     animation: rotate 1.5s infinite linear; }
   .loader .loading {
     color: #c1c1b5;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     font-weight: 400;
     margin-left: .6rem; }
 @keyframes rotate {
@@ -105,13 +106,13 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 0.4rem;
-    color: #c1c1b5;
+    color: #8d8b85;
     letter-spacing: 1px; }
   .movie-info p {
     font-size: 1.4rem;
     line-height: 1.6;
     font-weight: 400;
-    color: #263239; }
+    color: #4b4f52; }
   .movie-info__title {
     font-size: 3.2rem;
     margin-bottom: 3.2rem;
@@ -120,22 +121,20 @@ body {
 .add {
   display: flex;
   cursor: pointer;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 4.8rem;
-  width: 24rem;
-  border: 1px solid #c1c1b5; }
+  width: 24rem; }
   .add .movie__favourite--love {
     height: 2.25rem;
     width: 2.25rem;
     outline: orange;
     fill: #c1c1b5; }
   .add .add-to-watchlist {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #c1c1b5;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    margin-left: .6rem; }
+    margin-left: .8rem; }
 
 .favourites-container__likes {
   width: 30rem;
@@ -165,12 +164,12 @@ body {
       margin-bottom: 0; }
 
 .btn-inline {
-  height: 3.2rem;
+  height: 4.8rem;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   padding: 0 2rem;
   border: 1px solid #c1c1b5;
   color: #c1c1b5;
@@ -191,11 +190,10 @@ body {
   align-content: center; }
 
 .btn-home {
-  text-transform: uppercase;
   letter-spacing: 1.4px;
   text-align: center;
   vertical-align: middle;
-  font-size: 2.4rem;
+  font-size: 3rem;
   margin-right: 2.4rem;
   padding: 2px 0;
   border: none;
@@ -213,12 +211,11 @@ body {
 .watchlist {
   position: relative; }
   .watchlist .btn-watchlist {
-    text-transform: uppercase;
     letter-spacing: 1.4px;
     padding: 2px 0;
     text-align: center;
     vertical-align: middle;
-    font-size: 2.4rem;
+    font-size: 3rem;
     border: none;
     color: #c1c1b5;
     font-weight: 400;
@@ -239,10 +236,30 @@ body {
     visibility: hidden; }
 
 .back {
-  margin-top: 2rem; }
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .back__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: #c1c1b5; }
   .back .btn-back {
     letter-spacing: 1px;
-    font-size: 1.5rem; }
+    margin-left: .8rem;
+    padding: 2px 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2rem;
+    border: none;
+    color: #c1c1b5;
+    font-weight: 400;
+    transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s; }
+    .back .btn-back:hover {
+      color: #8d8b85; }
+    .back .btn-back:focus {
+      outline: none;
+      animation: pulstate 1s infinite; }
 
 .container {
   max-width: 144rem;
@@ -261,14 +278,31 @@ body {
   z-index: 1; }
 
 .home {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .home img {
-    width: 90%;
-    height: 70vh;
-    object-position: bottom;
-    object-fit: cover; }
+  background-image: url("https://w.wallhaven.cc/full/ym/wallhaven-ym9v87.png");
+  background-size: cover;
+  background-position: bottom;
+  margin: 0 auto;
+  width: 90%;
+  height: 70vh;
+  position: relative; }
+  .home .home__header {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 22%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    /* translate half of its width and height */
+    background-color: transparent;
+    border: 2px solid white;
+    width: 35rem; }
+    .home .home__header h2 {
+      font-size: 3.2rem;
+      line-height: 1.3;
+      color: #fff;
+      letter-spacing: 1px;
+      font-weight: 400;
+      padding: 2rem 0rem; }
 
 .results__container {
   display: grid;
@@ -296,7 +330,7 @@ body {
     object-fit: cover; }
 
 .info {
-  flex: 1 1 56%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   align-self: stretch;
