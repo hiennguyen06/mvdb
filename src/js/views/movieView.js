@@ -6,9 +6,12 @@ export const clearMovie = () => {
 };
 
 export const renderMovie = (movie, isFavourited) => {
+
+    const img = movie.img === 'N/A' ? `<img src="http://www.newdesignfile.com/postpic/2015/02/no-icon-available_68024.png" class="poster__img"> ` : ` <img src="${movie.img}" class="poster__img"/>`
+
     const markup = `
     <div class="poster">
-        <img src="${movie.img}" alt="Movie Poster" class="poster__img">
+        ${img}
     </div>
 
     <div class="info">
@@ -33,7 +36,7 @@ export const renderMovie = (movie, isFavourited) => {
 
             <div class="movie-info movie-rating">
                 <h2 class="movie-rating__heading">IMDB Rating</h2>
-                <p class="movie-reating__time">${movie.rating}</p>
+                <p class="movie-rating__time">${movie.title}</p>
             </div>
 
             <div class="movie-info movie-plot">

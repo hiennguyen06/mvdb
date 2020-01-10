@@ -37,10 +37,13 @@ export const clearResults = () => {
 
 // render a single movie element
 const renderMovie = movie => {
+
+    const img = movie.Poster === 'N/A' ? `<img src="http://www.newdesignfile.com/postpic/2015/02/no-icon-available_68024.png" class="results__card--poster"> ` : ` <img src="${movie.Poster}" class="results__card--poster"/>`
+
     const markup = `
         <div class="results__card">
             <a class="results__card--link" href=#${movie.imdbID}>
-                <img src="${movie.Poster}" class="results__card--poster"/>
+                ${img}
                 <div class="results__card--data">
                     <p class="results__title">${movie.Title}</p>
                     <p class="results__year">${movie.Year}</p>

@@ -20,7 +20,7 @@ export default class Movie {
             this.director = res.data.Director;
             this.time = res.data.Runtime;
             this.rating = res.data.Ratings[0].Value;
-            this.imdbID = res.data.imdbID;
+            this.imdbID = res.data.imdbID
             this.imdbRating = res.data.imdbRating;
             this.imdbVotes = res.data.imdbVotes;
         } catch (error) {
