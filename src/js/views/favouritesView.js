@@ -10,9 +10,11 @@ export const toggleFavouriteMenu = numFav => {
 };
 
 export const renderFavourite = favourite => { // favourite is returned from the model
+    const img = favourite.img === 'N/A' ? `<img src="http://www.newdesignfile.com/postpic/2015/02/no-icon-available_68024.png"> ` : ` <img src="${favourite.img}"/>`
+
     const markup = `
         <a class="favourites-container__likes" href="#${favourite.id}">
-            <img src="${favourite.img}">
+            ${img}
             <div class="favourites-container__infos">
                 <h class="favorites-container__infos-title">${favourite.title}</h>
                 <p class="favorites-container__infos-text">${favourite.release}</p>
