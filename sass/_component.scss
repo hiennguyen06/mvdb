@@ -1,6 +1,13 @@
 .search {
     width: 70em;
     // background-color: orangered;
+    @media only screen and (max-width: 1200px) {
+        width: 50em;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 40em;
+    }
 
     input[type=text] {
         color: #4b4f52;
@@ -19,6 +26,14 @@
         width: 100%;
         padding: 0 0 1.2rem;
 
+        @media only screen and (max-width: 900px) {
+            // font-size: 2rem;
+        }
+
+        @media only screen and (max-width: 450px) {
+           font-size: 2.2rem;
+        }
+
 
         &:focus {
             outline: none;
@@ -32,6 +47,11 @@
             font-size: 4rem;
             letter-spacing: 1px;
             color: #c1c1b5;
+
+            @media only screen and (max-width: 450px) {
+                font-size: 2.2rem;
+                text-align: center;
+             }
         }
     }
     
@@ -122,6 +142,11 @@
 .movie-info {
     margin-bottom: 2rem;
     width: 42rem;
+    
+    @media only screen and (max-width: 450px) {
+        // text-align: center;
+        width: 30rem;
+    }
 
     h2 {
         
@@ -131,6 +156,11 @@
         padding-bottom: 0.4rem;
         color: #8d8b85;
         letter-spacing: 1px;
+
+        @media only screen and (max-width: 450px) {
+            font-size: 1.2rem;
+        }
+    
     }
 
     p {
@@ -138,6 +168,11 @@
         line-height: 1.6;
         font-weight: 400;
         color: #4b4f52;
+
+        @media only screen and (max-width: 450px) {
+            font-size: 1.2rem;
+        }
+    
         
     }
 
@@ -145,6 +180,10 @@
         font-size: 3.2rem;
         margin-bottom: 3.2rem;
         color: #263239;
+
+        @media only screen and (max-width: 450px) {
+            font-size: 2.4rem;
+        }
     }
 
 }
@@ -156,6 +195,7 @@
     align-items: center;
     height: 4.8rem;
     width: 24rem;
+    
     // border: 1px solid #c1c1b5;
     // background-color: orangered;
 
@@ -271,6 +311,11 @@
     font-weight: 400;
     transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 
+    @media only screen and (max-width: 450px) {
+        font-size: 2.2rem;
+        text-align: center;
+     }
+
     &:hover {
         border-bottom: 2px solid #8d8b85;
         color: #8d8b85;
@@ -298,6 +343,12 @@
         color: #c1c1b5;
         font-weight: 400;
         transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+
+        @media only screen and (max-width: 450px) {
+            font-size: 2.2rem;
+            text-align: center;
+         }
+         
 
         &:hover {
             border-bottom: 2px solid #8d8b85;
@@ -330,6 +381,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    
     // width: 10rem;
 
 

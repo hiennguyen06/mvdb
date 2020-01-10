@@ -36,7 +36,7 @@ export const renderMovie = (movie, isFavourited) => {
 
             <div class="movie-info movie-rating">
                 <h2 class="movie-rating__heading">IMDB Rating</h2>
-                <p class="movie-rating__time">${movie.title}</p>
+                <p class="movie-rating__time">${movie.imdbRating}</p>
             </div>
 
             <div class="movie-info movie-plot">
@@ -59,7 +59,7 @@ export const renderMovie = (movie, isFavourited) => {
                 </svg>
                 <button class="btn-back">Back</button>
             </div>
-    </div>
+        </div>
     `;
 
     elements.movie.insertAdjacentHTML('afterbegin', markup);
