@@ -33,6 +33,7 @@ body {
 
 .search {
   width: 70em;
+  padding-left: 1.6rem;
 }
 @media only screen and (max-width: 1200px) {
   .search {
@@ -75,6 +76,7 @@ body {
   font-size: 3rem;
   letter-spacing: 1px;
   color: #dad8d7;
+  padding-left: 8px;
 }
 @media only screen and (max-width: 450px) {
   .search__field::-webkit-input-placeholder {
@@ -95,14 +97,14 @@ body {
 }
 .results__card .results__card--poster {
   width: 100%;
+  height: 40rem;
   display: block;
   margin-bottom: 0.4rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 .results__card .results__card--poster:hover {
   opacity: 0.3;
   transition: all 0.5s;
-  background: black;
   -webkit-transition: all 0.5s;
 }
 .results__card .results__card--data {
@@ -418,6 +420,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 1;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -461,7 +464,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
   justify-content: center;
   align-content: space-between;
-  grid-gap: 4rem 4rem;
+  grid-gap: 1rem 3rem;
 }
 
 .movie {

@@ -1,5 +1,6 @@
 .search {
     width: 70em;
+    padding-left: 1.6rem;
     // background-color: orangered;
     @media only screen and (max-width: 1200px) {
         width: 50em;
@@ -49,6 +50,7 @@
             font-size: 3rem;
             letter-spacing: 1px;
             color: #dad8d7;
+            padding-left: 8px;
 
             @media only screen and (max-width: 450px) {
                 font-size: 2.2rem;
@@ -60,9 +62,7 @@
 
 }
 
-.results__card {
-    // position: relative;
-    
+.results__card {    
     &:hover .results__card--data { 
         visibility: visible;
         opacity: 1;
@@ -78,16 +78,16 @@
 
     .results__card--poster {
         width: 100%;
+        height: 40rem;
         display: block;
         margin-bottom: .4rem;
-        object-fit: cover;
+        object-fit: contain;
         // box-shadow: 0 2rem 5rem rgba(0,0,0,.2);
         // border-radius: 0.6rem;
         
         &:hover {
             opacity: 0.3;
             transition: all 0.5s;
-            background: black;
             -webkit-transition: all 0.5s;
         }
     }
