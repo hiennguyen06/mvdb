@@ -71,7 +71,7 @@ body {
   width: 100%;
 }
 .search__field::-webkit-input-placeholder {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 3rem;
   letter-spacing: 1px;
   color: #dad8d7;
@@ -97,6 +97,13 @@ body {
   width: 100%;
   display: block;
   margin-bottom: 0.4rem;
+  object-fit: cover;
+}
+.results__card .results__card--poster:hover {
+  opacity: 0.3;
+  transition: all 0.5s;
+  background: black;
+  -webkit-transition: all 0.5s;
 }
 .results__card .results__card--data {
   visibility: hidden;
@@ -125,12 +132,12 @@ body {
 .loader svg {
   height: 2.2rem;
   width: 2.2rem;
-  fill: #c1c1b5;
+  fill: #171717;
   transform-origin: 44% 50%;
   animation: rotate 1.5s infinite linear;
 }
 .loader .loading {
-  color: #c1c1b5;
+  color: #171717;
   font-size: 2.4rem;
   font-weight: 400;
   margin-left: 0.6rem;
@@ -145,7 +152,7 @@ body {
 }
 
 .movie-info {
-  margin-bottom: 2rem;
+  margin-bottom: 8px;
   width: 42rem;
 }
 @media only screen and (max-width: 450px) {
@@ -154,11 +161,11 @@ body {
   }
 }
 .movie-info h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   padding-bottom: 0.4rem;
-  color: #8d8b85;
+  color: #171717;
   letter-spacing: 1px;
 }
 @media only screen and (max-width: 450px) {
@@ -167,7 +174,7 @@ body {
   }
 }
 .movie-info p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   font-weight: 400;
   color: #4b4f52;
@@ -177,10 +184,15 @@ body {
     font-size: 1.2rem;
   }
 }
+.movie-info .movie-plot {
+  border-bottom: 1px solid #171717;
+  padding-bottom: 2rem;
+}
 .movie-info__title {
-  font-size: 3.2rem;
-  margin-bottom: 3.2rem;
-  color: #263239;
+  font-size: 3rem;
+  color: #171717;
+  border-bottom: 1px solid #171717;
+  padding-bottom: 1.5rem;
 }
 @media only screen and (max-width: 450px) {
   .movie-info__title {
@@ -190,22 +202,33 @@ body {
 
 .add {
   display: flex;
-  cursor: pointer;
-  justify-content: flex-start;
-  align-items: center;
-  height: 4.8rem;
   width: 24rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  margin-left: 0.8rem;
+  border: 1px solid #171717;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  margin-left: 0.8rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  color: #171717;
+  font-weight: bold;
+  transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 }
 .add .movie__favourite--love {
   height: 2.25rem;
   width: 2.25rem;
-  outline: orange;
-  fill: #c1c1b5;
+  fill: #171717;
 }
 .add .add-to-watchlist {
-  font-size: 2rem;
-  color: #c1c1b5;
-  letter-spacing: 1px;
+  color: #171717;
   margin-left: 0.8rem;
 }
 
@@ -249,15 +272,14 @@ body {
   text-transform: uppercase;
   font-size: 2.4rem;
   padding: 0 2rem;
-  border: 1px solid #c1c1b5;
-  color: #c1c1b5;
+  border: 1px solid #171717;
+  color: #171717;
   font-weight: 400;
   border-radius: 0 2px 2px 0;
   transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 }
 .btn-inline:hover {
-  background-color: #c1c1b5;
-  color: #fff;
+  color: #dad8d7;
 }
 .btn-inline:focus {
   outline: none;
@@ -349,19 +371,23 @@ body {
   fill: #c1c1b5;
 }
 .back .btn-back {
+  color: #171717;
+  border: 1px solid #171717;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 0.8;
   letter-spacing: 1px;
   margin-left: 0.8rem;
-  padding: 2px 0;
   text-align: center;
   vertical-align: middle;
-  font-size: 2rem;
-  border: none;
-  color: #c1c1b5;
-  font-weight: 400;
+  font-size: 1.6rem;
+  color: #171717;
+  font-weight: bold;
   transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 }
 .back .btn-back:hover {
-  color: #8d8b85;
+  cursor: pointer;
 }
 .back .btn-back:focus {
   outline: none;
@@ -369,7 +395,7 @@ body {
 }
 
 .container {
-  max-width: 144rem;
+  max-width: 100vw;
   margin: auto;
   height: 100vh;
 }
@@ -383,7 +409,8 @@ body {
 }
 
 .header {
-  height: 11rem;
+  height: 10rem;
+  width: 100vw;
   background-color: transparent;
   background: #fff;
   display: flex;
@@ -438,8 +465,7 @@ body {
 }
 
 .movie {
-  width: 90%;
-  max-width: 1440rem;
+  width: 64%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -462,6 +488,8 @@ body {
   flex: 1 1 40%;
   display: flex;
   justify-content: flex-end;
+  background-color: #f6f6f6;
+  padding: 2.4rem 2.4rem;
 }
 .poster__img {
   width: 42rem;
@@ -470,11 +498,12 @@ body {
 }
 
 .info {
-  flex: 1 1 45%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-self: stretch;
-  padding: 0 5.6rem;
+  padding: 2.4rem 2.4rem;
+  background-color: #f6f6f6;
 }
 @media only screen and (max-width: 1000px) {
   .info {

@@ -51,13 +51,10 @@ export const renderMovie = (movie, isFavourited) => {
                     <use href="images/icons.svg#icon-heart${isFavourited ? '' : '-outlined'}"></use>
                 </svg>
             </button>
-            <p class="add-to-watchlist">Add to watchlist</p>
+            <p class="add-to-watchlist">ADD TO WISHLIST</p>
             </div>
             <div class="back">
-                <svg class="back__icon">
-                    <use href="images/icons.svg#icon-arrow-left2"></use>
-                </svg>
-                <button class="btn-back">Back</button>
+                <button class="btn-back">BACK TO SEARCH</button>
             </div>
         </div>
     `;
