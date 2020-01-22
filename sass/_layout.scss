@@ -5,8 +5,17 @@
     // background-color: orange;
 }
 
+.title {
+    font-size: 16rem;
+    font-weight: bold;
+    color: #171717;
+    // background-color: palegoldenrod;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
 .header {
-    height: 14rem;
+    height: 11rem;
     background-color: transparent;
     background: #fff;
     display: flex;
@@ -14,20 +23,21 @@
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1;
-    // background-color:  orangered;
+    // z-index: 1;
+    // background-color:  blue;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 
     @media only screen and (max-width: 750px) {
         flex-direction: column-reverse;
     }
-
 }
 
 .home {
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    background-image: url('https://w.wallhaven.cc/full/ym/wallhaven-ym9v87.png');
+    // background-image: url('https://w.wallhaven.cc/full/ym/wallhaven-ym9v87.png');
     background-size: cover;
     background-position: bottom;
     margin: 0 auto;

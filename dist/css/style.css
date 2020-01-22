@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   background-color: #fff;
@@ -45,7 +45,9 @@ body {
   }
 }
 .search input[type=text] {
-  color: #4b4f52;
+  color: #171717;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .search__field {
   font-size: 4rem;
@@ -70,9 +72,9 @@ body {
 }
 .search__field::-webkit-input-placeholder {
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 1px;
-  color: #c1c1b5;
+  color: #dad8d7;
 }
 @media only screen and (max-width: 450px) {
   .search__field::-webkit-input-placeholder {
@@ -275,11 +277,11 @@ body {
   text-align: center;
   vertical-align: middle;
   font-size: 3rem;
-  margin-right: 2.4rem;
-  padding: 2px 0;
+  padding: 4px 12px;
   border: none;
-  color: #c1c1b5;
-  font-weight: 400;
+  border-right: solid 2px #171717;
+  color: #171717;
+  font-weight: bold;
   transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 }
 @media only screen and (max-width: 450px) {
@@ -289,8 +291,7 @@ body {
   }
 }
 .btn-home:hover {
-  border-bottom: 2px solid #8d8b85;
-  color: #8d8b85;
+  color: #dad8d7;
   cursor: pointer;
 }
 .btn-home:focus {
@@ -303,13 +304,13 @@ body {
 }
 .watchlist .btn-watchlist {
   letter-spacing: 1.4px;
-  padding: 2px 0;
   text-align: center;
   vertical-align: middle;
+  padding: 4px 12px;
   font-size: 3rem;
+  color: #171717;
   border: none;
-  color: #c1c1b5;
-  font-weight: 400;
+  font-weight: bold;
   transition: border 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
 }
 @media only screen and (max-width: 450px) {
@@ -319,8 +320,7 @@ body {
   }
 }
 .watchlist .btn-watchlist:hover {
-  border-bottom: 2px solid #8d8b85;
-  color: #8d8b85;
+  color: #dad8d7;
   cursor: pointer;
 }
 .watchlist .btn-watchlist:focus {
@@ -374,8 +374,16 @@ body {
   height: 100vh;
 }
 
+.title {
+  font-size: 16rem;
+  font-weight: bold;
+  color: #171717;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 .header {
-  height: 14rem;
+  height: 11rem;
   background-color: transparent;
   background: #fff;
   display: flex;
@@ -383,7 +391,8 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 1;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 @media only screen and (max-width: 750px) {
   .header {
@@ -392,7 +401,6 @@ body {
 }
 
 .home {
-  background-image: url("https://w.wallhaven.cc/full/ym/wallhaven-ym9v87.png");
   background-size: cover;
   background-position: bottom;
   margin: 0 auto;
