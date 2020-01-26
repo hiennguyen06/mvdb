@@ -25,6 +25,7 @@ export const renderFavourite = favourite => { // favourite is returned from the 
     elements.favouritesMenu.insertAdjacentHTML('beforeend', markup);
 };
 
+
 export const removeFavourite = id => {
     const el = document.querySelector(`.favourites-container__likes[href*="${id}"]`);
     if (el) el.parentElement.removeChild(el); // if this an element, remove it
